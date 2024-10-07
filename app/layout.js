@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import {Barlow, Rubik} from "next/font/google"
 import "./globals.css";
+import Navbar from "./_components/Navbar/Navbar";
 
 const barlow = Barlow({
   weight: ['400', '600', '700'],
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${rubik.variable} ${barlow.variable} antialiased`}>
+        <Navbar />
         {children}
       </body>
     </html>
