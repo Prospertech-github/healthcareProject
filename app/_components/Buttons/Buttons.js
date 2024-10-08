@@ -1,10 +1,12 @@
 import React from "react";
 
-export default function Buttons({ text, nav }) {
+export default function Buttons({ text, nav, orange }) {
   return (
     <button
-      className={`bg-white text-foreground py-4 px-2 rounded-lg font-[500] lg:w-fit ${
+      className={`py-4 px-2 rounded-lg font-[500] relative lg:w-fit ${
         nav ? "w-[80%]" : ""
+      } ${
+        orange ? "bg-[#ff8a01] text-white" : "bg-white text-foreground"
       }`}
     >
       {text}
