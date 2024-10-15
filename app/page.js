@@ -3,6 +3,9 @@ import Buttons from "./_components/Buttons/Buttons";
 import Container from "./_components/Container";
 import Banner from "./images/banner.png";
 import Heading from "./_components/Heading";
+import Services from "./_components/Services";
+import { services } from "./_components/data";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -50,6 +53,25 @@ export default function Home() {
               turpis fusce sed volutpat.
             </p>
           </div>
+
+
+          <div className="w-fit grid grid-cols-4 mx-auto">
+            {services.map((service,index) => (
+              <Link href={`/services/${service.linkURL}`} key={index}>
+                <Services serviceName={service.name} url={service.imageUrl}/>
+              </Link>
+            ))}
+          </div>
+
+          {/* <Services serviceName={'Dermatology'} url={Neurology} />
+          <Services serviceName={'Dermatology'} url={Neurology} />
+          <Services serviceName={'Dermatology'} url={Neurology} />
+          <Services serviceName={'Dermatology'} url={Neurology} />
+          <Services serviceName={'Dermatology'} url={Neurology} />
+          <Services serviceName={'Dermatology'} url={Neurology} />
+          <Services serviceName={'Dermatology'} url={Neurology} />
+          <Services serviceName={'Dermatology'} url={Neurology} /> */}
+          
         </Container>
       </section>
     </div>
