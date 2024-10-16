@@ -8,6 +8,7 @@ import { services } from "./_components/data";
 import Link from "next/link";
 
 export default function Home() {
+
   return (
     <div>
       <section className="bg-background">
@@ -54,11 +55,10 @@ export default function Home() {
             </p>
           </div>
 
-
           <div className="w-fit grid grid-cols-4 mx-auto">
-            {services.map((service,index) => (
+            {services.map((service, index) => (
               <Link href={`/services/${service.linkURL}`} key={index}>
-                <Services serviceName={service.name} url={service.imageUrl}/>
+                <Services serviceName={service.name} url={service.imageUrl} />
               </Link>
             ))}
           </div>
@@ -71,7 +71,6 @@ export default function Home() {
           <Services serviceName={'Dermatology'} url={Neurology} />
           <Services serviceName={'Dermatology'} url={Neurology} />
           <Services serviceName={'Dermatology'} url={Neurology} /> */}
-          
         </Container>
       </section>
     </div>
